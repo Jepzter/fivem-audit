@@ -29,5 +29,5 @@ Logs certain events to another webserver for display outside of FiveM. Can be us
 4. Start your FiveM server
 
 #### Backend & Frontend
-1. Run ./server_[os]
+1. Run `./server_[os]` 
 2. Navigate to http://localhost:8090
