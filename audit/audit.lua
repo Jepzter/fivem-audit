@@ -13,7 +13,7 @@ local handleChat = function(author, color, text)
         audit = text,
         userId = author,
         username = GetPlayerName(author),
-        type = 'ChatMessage',
+        type = 'chatMessage',
     }
     saveAudit(auditlog)
 end
@@ -47,15 +47,12 @@ local handleResponse = function(statusCode, result, resultHeaders)
     end
     local encoded = json.encode(result) -- remove when using actual http endpoint
     local obj = json.decode(tostring(encoded))
-    print('Auditlog recorded (' .. obj.type .. ')')
-    print('Auditlog recorded (' .. obj.username .. ')')
-    print('Auditlog recorded (' .. obj.userId .. ')')
-    print('Auditlog recorded (' .. obj.audit .. ')')
+    print('Auditlog recorded (' .. obj.auditIt .. ')')
 end
 
 function saveAudit(auditlog)
     --handleResponse(201, auditlog, nil) -- use for debug
-    PerformHttpRequest('http://localhost:8090/api/fivem-scripts/auditlog-v1', handleResponse, "POST", json.encode(auditlog))
+    PerformHttpRequest('http://localhost:8090/api/fivem-audit/auditlog-v1', handleResponse, "POST", json.encode(auditlog))
 end
 
 AddEventHandler('chatMessage', handleChat)
