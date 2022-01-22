@@ -5,7 +5,7 @@ Logs certain events to another webserver for display outside of FiveM. Can be us
 
 ## Setup
 #### FiveM
-1. Add the files in [audit](https://github.com/Jepzter/fivem-audit/tree/main/audit) to /txData/CFXDefault_DAFCFA.base/resources/[insert_folder_here]
+1. Add the files in [audit](https://github.com/Jepzter/fivem-audit/tree/main/audit) to /txData/CFXDefault_DAFCFA.base/resources/[insert_folder_here]/audit
 2. Modify the host:port if changed
 3. Open `server.cfg` and add the line `ensure audit` under the resources section
 4. Start your FiveM server
