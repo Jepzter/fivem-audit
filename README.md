@@ -3,7 +3,7 @@
 ## About
 Logs certain events to another webserver for display outside of FiveM. Can be used for monitoring/graphs/statistics
 
-## Setup
+## Setup (when cloned)
 #### FiveM
 1. Add the files in [audit](https://github.com/Jepzter/fivem-audit/tree/main/audit) to /txData/CFXDefault_DAFCFA.base/resources/[insert_folder_here]/audit
 2. Modify the host:port if changed
@@ -18,3 +18,16 @@ Logs certain events to another webserver for display outside of FiveM. Can be us
 1. Run `npm install`
 2. Run `npm run serve` or `npm run build` if you have a webserver
 3. Access the ui by going to http://localhost:8080
+
+## Setup (from release donwload)
+1. Unzip package 
+
+#### FiveM
+1. Add the files in [audit](https://github.com/Jepzter/fivem-audit/tree/main/audit) to /txData/CFXDefault_DAFCFA.base/resources/[insert_folder_here]/audit
+2. Modify the host:port if changed
+3. Open `server.cfg` and add the line `ensure audit` under the resources section
+4. Start your FiveM server
+
+#### Backend & Frontend
+1. Run ./server_[os]
+2. Navigate to http://localhost:8090
