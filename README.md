@@ -1,7 +1,7 @@
 # fivem-audit
 
 ## About
-Logs certain events to another webserver for display outside of FiveM. Can be used for monitoring/graphs/statistics
+Logs certain events to another webserver for display outside of FiveM. Can be used for monitoring/graphs/statistics. Json file storage just for demostration, should be replaced with nosql/sql
 
 ## Setup (when cloned)
 #### FiveM
