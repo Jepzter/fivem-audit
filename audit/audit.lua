@@ -45,13 +45,11 @@ local handleResponse = function(statusCode, result, resultHeaders)
     if statusCode ~= 201 then
         print('Unhandled status code (%i)'):format(statusCode)
     end
-    local encoded = json.encode(result) -- remove when using actual http endpoint
-    local obj = json.decode(tostring(encoded))
-    print('Auditlog recorded (' .. obj.auditIt .. ')')
+    local obj = json.decode(tostring(result))
+    print('Auditlog recorded (' .. obj.auditId .. ')')
 end
 
 function saveAudit(auditlog)
-    --handleResponse(201, auditlog, nil) -- use for debug
     PerformHttpRequest('http://localhost:8090/api/fivem-audit/auditlog-v1', handleResponse, "POST", json.encode(auditlog))
 end
 
